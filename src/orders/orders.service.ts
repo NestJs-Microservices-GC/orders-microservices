@@ -115,7 +115,7 @@ export class OrdersService extends PrismaClient implements OnModuleInit {
   }
 
   async findOne(id: string) {
-    const order: any = await this.order.findFirst({
+    const order = await this.order.findFirst({
       where: { id },
       include: {
         OrderItem: {
